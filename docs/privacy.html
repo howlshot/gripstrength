@@ -1,15 +1,145 @@
+<!-- privacy.html -->
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>GripStrength Privacy Policy</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GripStrength — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for GripStrength (iPad)." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0c10;
+      --card: #12141b;
+      --text: #e9ecf1;
+      --muted: #b8c0cc;
+      --link: #7aa2ff;
+      --border: rgba(255,255,255,.12);
+      --accent: #d6b25e;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #111827;
+        --muted: #4b5563;
+        --link: #1d4ed8;
+        --border: rgba(17,24,39,.12);
+        --accent: #b38728;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+    header {
+      margin-bottom: 18px;
+    }
+    h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: .2px; }
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 18px;
+      margin: 14px 0;
+    }
+    h2 { font-size: 18px; margin: 0 0 10px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { margin: 8px 0 0 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+    .callout {
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      background: rgba(214,178,94,.08);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 22px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy – GripStrength</h1>
-  <p>GripStrength uses Bluetooth to connect to a Jamar Smart Hand Dynamometer and display grip strength readings.</p>
-  <p>The app does not require an account and does not collect, sell, or share personal information.</p>
-  <p>Grip readings (if saved) are stored locally on the device for demo/testing and are not transmitted to a server.</p>
-  <p>If you email support, we use your email only to respond.</p>
-  <p>Contact: dgr.robbins@gmail.com</p>
+  <div class="wrap">
+    <header>
+      <h1>Privacy Policy</h1>
+      <div class="sub">Last updated: DATE_HERE</div>
+    </header>
+
+    <div class="card">
+      <h2>Overview</h2>
+      <p>
+        GripStrength is designed to work offline and does not require an account.
+        This policy explains what information the app does (and does not) collect.
+      </p>
+      <div class="callout">
+        Summary: We do not collect, sell, or share personal data. Bluetooth is used only to connect to your dynamometer.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Information we collect</h2>
+      <p>GripStrength does not collect personal information such as name, email, phone number, or location.</p>
+      <ul>
+        <li>No account creation.</li>
+        <li>No advertising identifiers.</li>
+        <li>No third-party analytics SDKs.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Bluetooth</h2>
+      <p>
+        The app uses Bluetooth to connect to a Jamar Smart Hand Dynamometer and display grip-strength readings in real time.
+        Bluetooth access is used only for device discovery, connection, and reading measurement data from the paired device.
+      </p>
+      <p>
+        The app does not use Bluetooth to track location, and it does not share Bluetooth data with third parties.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Data storage</h2>
+      <p>
+        If the app stores any measurements or settings, they are stored locally on your iPad for app functionality.
+        The app does not upload your measurements to a server unless you add features that explicitly do so.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, contact us at:
+        <a href="mailto:SUPPORT_EMAIL_HERE">chingiejet@gmail.com</a>
+      </p>
+      <p>
+        You can also return to the <a href="./index.html">Support page</a>.
+      </p>
+    </div>
+
+    <footer>
+      © <span id="year"></span> DAVID ROBBINS. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
