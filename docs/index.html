@@ -1,13 +1,159 @@
+<!-- index.html -->
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>GripStrength</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GripStrength — Support</title>
+  <meta name="description" content="Support page for GripStrength (iPad) — connect to a Jamar Smart Hand Dynamometer via Bluetooth to view live grip strength." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0c10;
+      --card: #12141b;
+      --text: #e9ecf1;
+      --muted: #b8c0cc;
+      --link: #7aa2ff;
+      --border: rgba(255,255,255,.12);
+      --accent: #d6b25e;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #111827;
+        --muted: #4b5563;
+        --link: #1d4ed8;
+        --border: rgba(17,24,39,.12);
+        --accent: #b38728;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+    header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    h1 { font-size: 28px; margin: 0; letter-spacing: .2px; }
+    .badge {
+      font-size: 12px;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(0,0,0,.06);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 18px;
+      margin: 14px 0;
+    }
+    h2 { font-size: 18px; margin: 0 0 10px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { margin: 8px 0 0 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+    .callout {
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      background: rgba(214,178,94,.08);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 22px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95em;
+    }
+  </style>
 </head>
 <body>
-  <h1>GripStrength</h1>
-  <p>GripStrength is a TestFlight beta app that connects to a Bluetooth LE hand dynamometer (Jamar Smart Hand Dynamometer) to display grip strength readings.</p>
-  <p>Support: dgr.robbins@gmail.com</p>
-  <p><a href="privacy.html">Privacy Policy</a></p>
+  <div class="wrap">
+    <header>
+      <h1>GripStrength Support</h1>
+      <span class="badge">iPad App</span>
+    </header>
+
+    <div class="card">
+      <h2>What this app does</h2>
+      <p>
+        GripStrength is an iPad app that connects to a <em>Jamar Smart Hand Dynamometer</em> over Bluetooth
+        and displays live grip-strength readings, a live graph, and recorded trials.
+      </p>
+      <div class="callout">
+        If you’re having trouble connecting, start with the “Troubleshooting” section below.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Getting started</h2>
+      <ol>
+        <li>Turn on your Jamar Smart dynamometer.</li>
+        <li>Open GripStrength on your iPad and go to the <strong>Devices</strong> tab.</li>
+        <li>Tap <strong>Scan</strong> and select your device to connect.</li>
+        <li>Return to the dashboard to view live readings and record trials.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Troubleshooting Bluetooth</h2>
+      <ul>
+        <li>Make sure Bluetooth is enabled on the iPad (Settings → Bluetooth).</li>
+        <li>Keep the dynamometer close to the iPad (within a few feet during pairing).</li>
+        <li>Turn the dynamometer off and back on, then scan again.</li>
+        <li>If the device appears but won’t connect, try “Forget This Device” in iPad Bluetooth settings, then re-pair.</li>
+        <li>Restart the iPad if the device still won’t connect.</li>
+      </ul>
+      <p style="margin-top:10px;">
+        Note: iPadOS may ask for Bluetooth permission the first time the app scans. Choose <strong>Allow</strong>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Support contact</h2>
+      <p>
+        Email: <a href="mailto:SUPPORT_EMAIL_HERE">chingiejet@gmail.com</a><br />
+        Response time: typically within 1–2 business days.
+      </p>
+      <p style="margin-top:10px;">
+        When emailing, include (if possible): iPad model, iPadOS version, and what you were doing when the issue occurred.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Privacy</h2>
+      <p>
+        Read our privacy policy here:
+        <a href="./privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+
+    <footer>
+      © <span id="year"></span> DAVID ROBBINS. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
