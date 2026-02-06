@@ -2,16 +2,19 @@
 //  gripstrengthApp.swift
 //  gripstrength
 //
-//  Created by Katrina Palanca on 1/26/26.
+//  Main app entry point
 //
 
 import SwiftUI
 
 @main
 struct gripstrengthApp: App {
+    @State private var bluetoothManager = BluetoothManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(bluetoothManager)
         }
     }
 }
