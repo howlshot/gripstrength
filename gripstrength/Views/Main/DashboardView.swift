@@ -33,6 +33,7 @@ struct DashboardView: View {
                         HighScoreToolbarBadge(viewModel: viewModel)
                     }
                 }
+
                 ToolbarItem(placement: .principal) {
                     Image("WhiteCanyonRanchLogo")
                         .resizable()
@@ -40,18 +41,17 @@ struct DashboardView: View {
                         .frame(height: 20)
                         .opacity(0.85)
                 }
+
+                #if DEBUG
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: { showDebug.toggle() }) {
                         Image(systemName: "ladybug")
                             .foregroundStyle(showDebug ? Theme.gold : Theme.textTertiary)
                     }
                 }
+                #endif
             }
-            .safeAreaInset(edge: .bottom) {
-                if showDebug {
-                    DebugBLEView(rawData: bluetoothManager.lastRawData)
-                }
-            }
+
         }
     }
 }
